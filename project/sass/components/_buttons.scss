@@ -1,0 +1,14 @@
+.main-btn {
+    background-color: $mainColor;
+    border: $mainColor;
+    color: $whiteColor;
+    width: 120px;
+    @extend .trans-effect;
+    &:hover {
+        background-color: rgba($mainColor, 0.8);
+        box-shadow: 0 2px 12px -5px $mainColor;
+    }
+}
+.normal-btn {
+    width: 120px;
+}

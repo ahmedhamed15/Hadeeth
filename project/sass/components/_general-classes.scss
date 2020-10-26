@@ -1,0 +1,28 @@
+.trans-effect {
+    transition: all 0.3s ease-in-out;
+}
+.main-background {
+    background: url('../images/global/islamic-background.svg') no-repeat center center fixed;
+    background-size: cover;
+    background-color: $blackColor;
+}
+.main-background-mobile {
+    @media #{$maxMobile} {
+        background: url('../images/global/islamic-background.svg') !important; 
+        background-size: cover !important;
+        background-color: $blackColor !important;
+        background-position: center center !important;
+    }
+}
+.reset-button-style {
+    background: none;
+    border: none;
+    &:focus,
+    &:hover,
+    &:active,
+    &.dropdown-toggle {
+        background: none !important;
+        border: none !important;
+        box-shadow: none !important;
+    }
+}

@@ -1,0 +1,171 @@
+.general-style-page {
+    width: 350px;
+    margin: auto;
+    @media #{$maxMobile} {
+        width: 100%;
+    }
+    &.about-app {
+        .all-general-style-sources {
+            .general-style-source {
+                a {
+                    font-size: 16px;
+                }
+                ul {
+                    direction: rtl;
+                    list-style: none;
+                    li {
+                        position: relative;
+                        &::before {
+                            content: "";
+                            width: 8px;
+                            height: 8px;
+                            border-radius: 50%;
+                            background-color: $mainColor;
+                            position: absolute;
+                            top: 15px;
+                            right: -18px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &.settings-page {
+        .all-general-style-sources {
+            .general-style-source {
+                text-align: right;
+                direction: rtl;
+                span {
+                    @media #{$maxMobile} {
+                        color: $mainColor;
+                    }
+                }
+                a {
+                    cursor: pointer;
+                    i, svg {
+                        color: $mainColor;
+                    }
+                }
+                p {
+                    margin: 0;
+                    color: #707070;
+                }
+            }
+        }
+        .delete-account {
+            a {
+                cursor: pointer;
+                color: $mainColor; 
+                position: absolute;
+                bottom: 110px;
+                left: 50%;
+                transform: translateX(-50%);
+                @media #{$maxMobile} {
+                    bottom: 170px;
+                }
+            }
+        }
+        #changeEmail,
+        #createPassword,
+        #changePhone,
+        #deleteAccount {
+            p {
+                color: $mainColor;
+            }
+            .modal-footer {
+                .normal-btn {
+                    padding: 5px;
+                    margin-right: 5px;
+                }
+            }
+        }
+    }
+    .general-style-icon {
+        margin: 30px 0;
+        @media #{$maxMobile} {
+            margin: 0 0 20px;
+        }
+        img {  
+            width: 45px;
+            height: 45px;
+            @media #{$maxMobile} {
+                width: 30px;
+                height: 30px;
+            }
+        }
+    }
+    .all-general-style-sources {
+        .general-label {
+            color: $mainColor;
+            font: {
+                size: 25px;
+                weight: 700
+            }
+            @media #{$maxMobile} {
+                font-size: 21px;
+            }
+        }
+        .general-style-source {
+            min-height: 60px;
+            height: auto;
+            background-color: $blackColor;
+            box-shadow: 6px 7px 17px -5px #444343;
+            padding: 10px;
+            position: relative;
+            @extend .trans-effect;
+            @media #{$maxMobile} {
+                background-color: $whiteColor;
+                box-shadow:0px 5px 15px -5px rgba($mainColor, 0.8);
+                min-height: 60px;
+                height: auto;
+            }
+            &:hover {
+                box-shadow: none;
+            }
+            &:not(:last-child) {
+                margin-bottom: 25px
+            }
+            a {
+                color: $whiteColor;
+                font: {
+                    size: 18px;
+                    weight: 500;
+                }
+                line-height: 40px;
+                &:before{
+                    content: "";
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    right: 0;
+                    bottom: 0;
+                    z-index: 9;
+                }
+                @media #{$maxMobile} {
+                    color: $blackColor;
+                }
+            }
+        }
+        form {
+            textarea {
+                min-height: 250px;
+                direction: rtl;
+                &::placeholder {
+                    color: rgba($mainColor, 0.7);
+                }
+            }
+            .submit-btn {
+                @media #{$maxMobile} {
+                    text-align: left;
+                }
+                button[type="submit"] {
+                    width: 180px;
+                    border-radius: 25px;
+                    @media #{$maxMobile} {
+                        width: 150px;
+                    }
+                }
+            }
+        }
+    }
+}

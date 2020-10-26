@@ -1,0 +1,265 @@
+@import "helpers/variables";
+@import "helpers/mixins";
+@import "components/general-classes";
+@import "components/buttons";
+@import "components/animations";
+@import "components/scroll-top-button";
+@import "layouts/navbar";
+@import "layouts/main_sidebar";
+@import "sections/homepage";
+@import "sections/favorite";
+@import "sections/profile";
+
+@import "sections/services";
+@import "layouts/footer";
+
+/* =====[Start: Global rules]===== */
+body {
+  overflow: hidden;
+  background-color: $whiteColor;
+}
+*, h1, h2, h3, h4, h5, h6 {
+  font-family: "Amiri", serif;
+}
+a {
+  text-decoration: none !important;
+}
+.wrapper {
+  display: flex;
+  width: 100%;
+}
+#content {
+  width: calc(100% - 500px);
+  padding: 40px;
+  min-height: 100vh;
+  transition: all 0.3s;
+  top: 80px;
+  right: 250px;
+  bottom: 0;
+  overflow-y: auto;
+  position: fixed;
+  border-radius: 20px 20px 0 0;
+  color: #fff;
+  padding-bottom: 110px;
+  .overlay-content {
+    @media #{$maxMobile} {
+        padding-bottom: 70px;
+    }
+    &:after {
+      content: "";
+      position: fixed;
+      width: 100%;
+      height: 100vh;
+      background: url('../images/global/islamic-background.svg') no-repeat center center fixed;
+      background-size: cover;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      right: 0;
+    //   transform: translate(calc(-50% + 70px), calc(-50% + 50px));
+      z-index: -1;
+      background-color: #000; 
+      @media #{$maxMobile} {
+          display: none;
+      }
+    }
+  }
+}
+#content.active {
+  width: calc(100% - 125px);
+  @media #{$maxMobile} {
+    width: 100%
+  }
+}
+@media (max-width: 768px) {
+  #content {
+    width: 100%;
+    left: 0;
+  }
+}
+.simplebar-content-wrapper {
+  overflow: auto;
+}
+/* width */
+::-webkit-scrollbar {
+  width: 7px;
+  @media #{$maxMobile} {
+      width: 4px;
+  }
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  // box-shadow: inset 0 0 5px $mainColor; 
+  border-radius: 10px;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: $mainColor; 
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: rgba($mainColor, 0.7); 
+}
+
+.modal-backdrop.show {
+  display: none !important;
+}
+.modal.show .modal-dialog {
+  transform: translateY(50%) !important;
+  .modal-content {
+    border-radius: 20px;
+  }
+}
+.modal-header {
+  border: none;
+  padding: 40px;
+  .modal-title {
+    width: 100%;
+    color: $mainColor;
+    font: {
+      size: 27px;
+      weight: bold;
+    }
+    @media #{$maxMobile} {
+      font-size: 22px;
+    }
+  }
+  button.close {
+    position: absolute;
+    right: 18px;
+    top: 15px;
+  }
+}
+.modal-body {
+  .khetma-info {
+    direction: rtl;
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
+    span {
+      display: inline-block;
+      color: $mainColor;
+      font: {
+        size: 18px;
+        weight: bold
+      }
+      &:first-child {
+        width: 150px;
+        text-align: right;
+      }
+      &:last-child {
+        width: 25px;
+        height: 25px;
+        line-height: 25px;
+        background-color: $mainColor;
+        color: $whiteColor;
+        @media #{$maxMobile} {
+          background-color: $whiteColor;
+          color: $mainColor;
+        }
+      }
+    }
+  }
+}
+.modal-footer {
+  border: none;
+  width: max-content;
+  margin: auto;
+  margin-bottom: 40px;
+  margin-top: 30px;
+} 
+#shareWithYourFriends {
+  .modal-header {
+    padding-bottom: 10px;
+  }
+  .invitation-form {
+    width: 70%;
+    margin: auto;
+    direction: rtl;
+    margin-bottom: 25px;
+    button[type="submit"] {
+      margin-top: -38px;
+      background-color: $mainColor;
+      border-color: $mainColor;
+      color: $whiteColor
+    }
+    input {
+      padding-left: 65px;
+      border-color: $mainColor;
+      &:focus,
+      &:active {
+        box-shadow: 0 0 0 0.2rem rgba($mainColor,.25);
+      }
+    }
+  }
+  .external-invitation {
+    h3 {
+      color: $mainColor;
+      font-size: 27px;
+      font-weight: bold;
+      margin-bottom: 25px;
+      @media #{$maxMobile} {
+        font-size: 22px;
+      }
+    }
+    .a2a_kit {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      a {
+        .a2a_svg {
+          background: none !important;
+          margin: 0 5px;
+          path {
+            fill: $mainColor !important;
+            @media #{$maxMobile} {
+              fill: $whiteColor !important
+            }
+          }
+        }
+      }
+    }
+  }
+  .modal-footer {
+    margin-top: 0;
+  }
+}
+.modal {
+  @extend .trans-effect;
+  .modal-dialog {
+    .modal-content {
+      @extend .main-background-mobile;
+    }
+  }
+}
+@media #{$maxMobile} {
+  .modal {
+    position: fixed;
+    bottom: -100%;
+    top: auto;
+    left: 0;
+    right: 0;
+    opacity: 1;
+    .modal-dialog {
+      margin: 0;
+      .modal-content {
+        border-radius: 20px 20px 0 0 !important;
+      }
+    }
+  }
+  .modal.fade.show {
+    position: fixed;
+    top: auto;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    .modal-dialog {
+      transform: translateY(0) !important;
+    }
+  }
+}
+/* =====[End: Global rules]===== */

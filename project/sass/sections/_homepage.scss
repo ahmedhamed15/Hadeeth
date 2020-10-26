@@ -1,0 +1,76 @@
+.homepage {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, calc(-50% - 60px));
+    @media #{$maxMobile} {
+        transform: translate(-50%, calc(-50% - 90px));
+    }
+    .khetmatak-title {
+        text-align: center;
+        margin-bottom: 20px;
+        font: {
+            size: 40px;
+            weight: 500;
+        }
+        color: $mainColor;
+        @media #{$maxMobile} {
+            font-size: 35px;
+            margin-bottom: 15px;
+        }
+    }
+    .pie_progress {
+        width: 270px !important;
+        margin: 10px auto;
+        @media #{$maxMobile} {
+            width: 190px !important;
+            max-width: 300px;
+        }
+        .pie_progress__number {
+            @media #{$maxMobile} {
+                color: $mainColor;
+                font-size: 30px;
+            }
+        }
+        .pie_progress__svg {
+            ellipse {
+                + path {
+                    stroke: $mainColor !important;
+                }
+            }
+        }
+    }
+    .progress-number {
+        direction: rtl;
+        font: {
+            size: 30px;
+            weight: 600;
+        }
+        margin: 30px 0;
+        color: $mainColor;
+        @media #{$maxMobile} {
+            font-size: 25px;
+            margin: 20px 0;
+        }
+    }
+    .continue-works {
+        @media #{$maxMobile} {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+        }
+        > a {
+            width: 180px;
+            border-radius: 25px;
+            @media #{$maxMobile} {
+                margin-right: 10px;
+            }
+        }
+        >a, >button {
+            @media #{$maxMobile} {
+                width: 120px;
+                border-radius: 25px;
+            }
+        }
+    }
+}

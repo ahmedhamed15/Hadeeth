@@ -1,0 +1,222 @@
+.main-navbar {
+    padding-left: 280px;
+    padding-right: 280px;
+    @extend .main-background-mobile;
+    @media #{$maxMobile} {
+        padding: 0;
+        height: 61px;
+        border-radius: 0 0 20px 20px;
+        padding: 10px;
+    }
+    @media #{$minSmall} {
+        background-color: $whiteColor !important;
+    }
+    #sidebarCollapse-main,
+    .toggle-search-section,
+    .modal-btn {
+        @extend .reset-button-style;
+    }
+    .modal-btn {
+        padding: 0;
+    }
+    .toggle-search-section {
+        color: $mainColor !important;
+    }
+    .animated-icon1 {
+        width: 30px;
+        height: 20px; 
+        position: relative;
+        margin: 0px;
+        transform: rotate(0deg);
+        transition: .5s ease-in-out;
+        cursor: pointer;
+        span {
+            display: block;
+            position: absolute;
+            height: 3px;
+            border-radius: 9px;
+            opacity: 1;
+            left: 0;
+            transform: rotate(0deg);
+            transition: .25s ease-in-out;
+            background: $mainColor;
+            &:first-child {
+                top: 0px;
+                width: 100%;
+            }
+            &:nth-child(2) {
+                top: 10px;
+                width: 75%;
+            }
+            &:last-child {
+                top: 20px;
+                width: 50%;
+            }
+        }
+        &.open {
+            span {
+                &:first-child {
+                    top: 11px;
+                    transform: rotate(135deg);
+                }
+                &:nth-child(2) {
+                    opacity: 0;
+                    left: -60px;
+                }
+                &:nth-child(3) {
+                    top: 11px;
+                    width: 100%;
+                    transform: rotate(-135deg);
+                }
+            }
+        }
+    }
+    @media #{$maxMobile} {
+        .main-logo-in-mobile {
+            margin-right: 10px;
+            a {
+                color: $mainColor;
+                height: 32px;
+            }
+            span {
+                display: inline-flex;
+                flex-direction: column;
+                margin-right: 5px;
+                position: relative;
+                top: -5px;
+                > b {
+                    height: 15px;
+                }
+            }
+            img {
+                width: 36px;
+                height: auto;
+            }
+        }
+    }
+    .navbar-collapse {
+        @media #{$maxMobile} {
+            display: block;
+            position: fixed; 
+            bottom: 0;
+            left: 0;
+            right: 0;
+            border-radius: 25px 25px 0 0;
+        }
+        @extend .main-background-mobile;
+        ul.navbar-nav {
+            direction: rtl; 
+            padding: 0;
+            @media #{$maxMobile} {
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+            }
+            li {
+                overflow: hidden;
+                padding-right: .7rem;
+                padding-left: .7rem;
+                img {
+                    width: 45px;
+                    height: 45px;
+                }
+                &:not(.profile-page) {
+                    img {
+                        padding: 8px;
+                    }
+                }
+                &:first-child {
+                    .nav-link {
+                        img.user-in-mobile {
+                            @media #{$maxMobile} {
+                                padding: 4px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        form.search-form {
+            @media #{$maxMobile} {
+                padding: 4px;
+                position: fixed;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                bottom: -100%;
+                height: 400px;
+                border-radius: 20px 20px 0 0;
+                padding: 20px;
+                display: block;
+                margin: 0 !important;
+            }
+            @extend .main-background-mobile;
+            @extend .trans-effect;
+            &.active {
+                @media #{$maxMobile} {
+                    bottom: 0;
+                }
+            }
+            button,
+            button:hover,
+            button:focus {
+                border: none;
+                outline: none;
+                box-shadow: none;
+                @media #{$maxMobile} {
+                    background: none;
+                }
+            }
+            button {
+                border-radius: 50%;
+                height: 42px;
+                width: 42px;
+                padding: 0;
+                line-height: 44px;
+                @media #{$maxMobile} {
+                    margin-top: -53px !important;
+                    color: $lightBlackColor;
+                }
+            }
+            input[type="search"] {
+                border-radius: 30px;
+                border: 1px solid $mainColor;
+                direction: rtl;
+                &::placeholder {
+                    color: $mainColor;
+                    @media #{$maxMobile} {
+                        color: $lightBlackColor;
+                    }
+                }
+                &:focus {
+                    box-shadow: 0 0 0 0.2rem rgba($mainColor,.25);
+                }
+                @media #{$maxMobile} {
+                    padding-right: 45px;
+                    background-color: $mainColor;
+                    color: $lightBlackColor;
+                    box-shadow: 0px 2px 10px -3px $grayColor;
+                }
+            }
+            @media #{$maxMobile} {
+                .search-history {
+                    width: 100%;
+                    direction: rtl;
+                    ul {
+                        padding: 0;
+                        li {
+                            margin-bottom: 10px;
+                            i, svg {
+                                color: rgba(#A1A1A1, 0.6);
+                                margin-left: 5px;
+                            }
+                            a {
+                                color: $mainColor;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
