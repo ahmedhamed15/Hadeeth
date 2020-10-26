@@ -284,6 +284,9 @@
         background: none;
         color: #000;
         text-decoration: none; }
+        @media (max-width: 768px) {
+          .sidebar .components li a:hover, .sidebar .components li a.active {
+            color: #FFFCFC; } }
   @media (max-width: 768px) {
     .sidebar .sidebar-footer {
       margin: 0; } }
@@ -625,6 +628,287 @@ a.article:hover {
     @media (max-width: 768px) {
       .general-style-page .all-general-style-sources form .submit-btn button[type="submit"] {
         width: 150px; } }
+
+.profile-page .profile-main-info .profile-img img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%; }
+  @media (max-width: 768px) {
+    .profile-page .profile-main-info .profile-img img {
+      width: 120px;
+      height: 120px; } }
+
+.profile-page .profile-main-info .user-name {
+  color: #38AB1E;
+  font-size: 22px;
+  font-weight: bold;
+  display: inline-block;
+  margin: 10px 0;
+  cursor: pointer; }
+  @media (max-width: 768px) {
+    .profile-page .profile-main-info .user-name {
+      font-size: 20px;
+      font-weight: bold; } }
+  @media (max-width: 768px) {
+    .profile-page .profile-main-info .user-name:hover {
+      color: #000; } }
+
+.profile-page .profile-main-info .user-code {
+  direction: rtl; }
+  @media (max-width: 768px) {
+    .profile-page .profile-main-info .user-code {
+      color: #000; } }
+
+.profile-page #changeUsername input {
+  direction: rtl; }
+
+.profile-page .other-user-info {
+  margin-top: 50px; }
+  .profile-page .other-user-info form {
+    direction: rtl;
+    max-width: 300px;
+    margin-left: auto;
+    text-align: right; }
+    .profile-page .other-user-info form .general-label {
+      color: #38AB1E;
+      font-size: 20px;
+      font-weight: 600; }
+      @media (max-width: 768px) {
+        .profile-page .other-user-info form .general-label {
+          font-size: 16px; } }
+
+.profile-page .user-friends {
+  text-align: right;
+  margin-top: 70px; }
+  .profile-page .user-friends > h3 {
+    font-size: 20px;
+    font-weight: 600;
+    color: #38AB1E;
+    margin-bottom: 20px; }
+    @media (max-width: 768px) {
+      .profile-page .user-friends > h3 {
+        font-size: 16px; } }
+  .profile-page .user-friends > .row {
+    flex-direction: row-reverse; }
+    .profile-page .user-friends > .row .friend-info .friend-img {
+      margin-bottom: 15px; }
+      .profile-page .user-friends > .row .friend-info .friend-img img {
+        width: 79px;
+        height: 79px; }
+    .profile-page .user-friends > .row .friend-info .frienf-name {
+      max-width: 79px;
+      color: #FFFCFC;
+      font-size: 16px;
+      font-weight: normal; }
+      @media (max-width: 768px) {
+        .profile-page .user-friends > .row .friend-info .frienf-name {
+          color: #000; } }
+      .profile-page .user-friends > .row .friend-info .frienf-name span {
+        display: block;
+        width: 79px;
+        margin-left: auto; }
+    .profile-page .user-friends > .row .friend-info.all-friends-grid {
+      display: flex;
+      flex-direction: row-reverse;
+      align-items: center;
+      margin-bottom: 50px; }
+      .profile-page .user-friends > .row .friend-info.all-friends-grid .friend-img {
+        margin-bottom: 0; }
+      .profile-page .user-friends > .row .friend-info.all-friends-grid > div {
+        flex: 0 0 50%;
+        max-width: 50%; }
+        .profile-page .user-friends > .row .friend-info.all-friends-grid > div.friend-img {
+          flex: 0 0 30%;
+          max-width: 30%; }
+      .profile-page .user-friends > .row .friend-info.all-friends-grid .friend-progress {
+        padding-right: 10px; }
+        .profile-page .user-friends > .row .friend-info.all-friends-grid .friend-progress .friend-name {
+          margin-bottom: 5px;
+          display: block; }
+          @media (max-width: 768px) {
+            .profile-page .user-friends > .row .friend-info.all-friends-grid .friend-progress .friend-name {
+              color: #000; } }
+        .profile-page .user-friends > .row .friend-info.all-friends-grid .friend-progress .friend-progress-bar > span {
+          height: 7px;
+          background-color: #FFFCFC;
+          display: block;
+          border-radius: 7px; }
+          @media (max-width: 768px) {
+            .profile-page .user-friends > .row .friend-info.all-friends-grid .friend-progress .friend-progress-bar > span {
+              border: 1px solid #38AB1E; } }
+          .profile-page .user-friends > .row .friend-info.all-friends-grid .friend-progress .friend-progress-bar > span span {
+            border-radius: 7px;
+            background-color: #38AB1E;
+            height: 7px;
+            display: block; }
+  .profile-page .user-friends .show-all-friends {
+    display: block;
+    color: #38AB1E;
+    font-size: 20px;
+    font-weight: 500;
+    margin: 40px 0; }
+    @media (max-width: 768px) {
+      .profile-page .user-friends .show-all-friends {
+        font-size: 18px;
+        text-align: left !important; } }
+
+.hadeeth-explain {
+  direction: rtl; }
+  .hadeeth-explain .hadeeth-heading {
+    color: #38AB1E; }
+    .hadeeth-explain .hadeeth-heading .h2 {
+      font-size: 30px;
+      font-weight: 600; }
+      @media (max-width: 768px) {
+        .hadeeth-explain .hadeeth-heading .h2 {
+          font-size: 18px; } }
+    .hadeeth-explain .hadeeth-heading p {
+      font-size: 18px;
+      margin-top: 15px; }
+      @media (max-width: 768px) {
+        .hadeeth-explain .hadeeth-heading p {
+          font-size: 15px;
+          margin-top: 10px; } }
+  .hadeeth-explain .hadeeth-content {
+    margin-top: 40px; }
+    @media (max-width: 768px) {
+      .hadeeth-explain .hadeeth-content {
+        margin-top: 20px;
+        margin-bottom: 20px; } }
+    .hadeeth-explain .hadeeth-content > h3 {
+      font-size: 25px;
+      font-weight: 500;
+      color: #38AB1E;
+      margin-bottom: 40px; }
+      @media (max-width: 768px) {
+        .hadeeth-explain .hadeeth-content > h3 {
+          font-size: 20px; } }
+      @media (max-width: 768px) {
+        .hadeeth-explain .hadeeth-content > h3 + .row {
+          box-shadow: 8px 7px 18px -13px rgba(56, 171, 30, 0.8); } }
+    .hadeeth-explain .hadeeth-content > .row > div:first-child > p {
+      font-size: 18px; }
+    .hadeeth-explain .hadeeth-content p {
+      font-size: 20px;
+      line-height: 2; }
+      @media (max-width: 768px) {
+        .hadeeth-explain .hadeeth-content p {
+          color: #000;
+          font-size: 18px;
+          text-align: right; } }
+  .hadeeth-explain .hadeeth-audio audio {
+    height: 28px;
+    width: 45%;
+    margin: 30px 0 100px; }
+    @media (max-width: 768px) {
+      .hadeeth-explain .hadeeth-audio audio {
+        width: 100%;
+        margin: 30px 0; } }
+  .hadeeth-explain .hadeeth-actions {
+    text-align: right;
+    margin-top: 55px; }
+    @media (max-width: 768px) {
+      .hadeeth-explain .hadeeth-actions {
+        padding: 0; } }
+    .hadeeth-explain .hadeeth-actions li {
+      display: inline-block; }
+      .hadeeth-explain .hadeeth-actions li .a2a_kit a {
+        position: relative;
+        top: 5px; }
+    .hadeeth-explain .hadeeth-actions button, .hadeeth-explain .hadeeth-actions a {
+      background: none;
+      border: none;
+      margin: 0 10px;
+      color: #38AB1E;
+      cursor: pointer; }
+      .hadeeth-explain .hadeeth-actions button:active, .hadeeth-explain .hadeeth-actions button:focus, .hadeeth-explain .hadeeth-actions button:hover, .hadeeth-explain .hadeeth-actions a:active, .hadeeth-explain .hadeeth-actions a:focus, .hadeeth-explain .hadeeth-actions a:hover {
+        background: none;
+        border: none;
+        box-shadow: none;
+        outline: none; }
+      .hadeeth-explain .hadeeth-actions button span, .hadeeth-explain .hadeeth-actions a span {
+        font-size: 18px; }
+  .hadeeth-explain .hadeeth-navigation > div {
+    padding: 0 40px; }
+    @media (max-width: 768px) {
+      .hadeeth-explain .hadeeth-navigation > div {
+        padding: 0; } }
+  .hadeeth-explain .hadeeth-navigation a {
+    border-radius: 25px; }
+  .hadeeth-explain #explainHadeeth .modal-dialog {
+    transform: translateY(80px) !important; }
+  .hadeeth-explain #explainHadeeth .modal-body p {
+    color: #000; }
+    @media (max-width: 768px) {
+      .hadeeth-explain #explainHadeeth .modal-body p {
+        color: #FFFCFC;
+        font-size: 18px; } }
+  .hadeeth-explain #explainHadeeth .modal-footer {
+    text-align: right; }
+    .hadeeth-explain #explainHadeeth .modal-footer .normal-btn {
+      margin-right: 5px;
+      padding: 5px; }
+
+.register-and-login {
+  background: url("../images/global/islamic-background.svg") no-repeat center center fixed;
+  background-size: cover;
+  background-color: #000;
+  height: 100vh;
+  width: 100vw; }
+  .register-and-login > .container {
+    height: 100%;
+    display: flex;
+    align-items: center; }
+  .register-and-login .main-form {
+    width: 300px;
+    margin: auto; }
+    .register-and-login .main-form .main-logo {
+      display: flex;
+      justify-content: center;
+      flex-direction: row-reverse;
+      color: #38AB1E; }
+      .register-and-login .main-form .main-logo > img {
+        width: 70px;
+        height: auto; }
+      .register-and-login .main-form .main-logo > span {
+        margin-right: 11px;
+        margin-top: 6px; }
+        .register-and-login .main-form .main-logo > span b {
+          display: block;
+          font-size: 32px; }
+          .register-and-login .main-form .main-logo > span b:last-child {
+            margin-top: -25px; }
+    .register-and-login .main-form form > h2 {
+      color: #FFFCFC;
+      font-size: 20px;
+      margin: 35px 0 20px; }
+    .register-and-login .main-form form .form-group {
+      position: relative; }
+      .register-and-login .main-form form .form-group input {
+        text-align: right; }
+        .register-and-login .main-form form .form-group input::-moz-placeholder {
+          color: rgba(56, 171, 30, 0.5); }
+        .register-and-login .main-form form .form-group input:-ms-input-placeholder {
+          color: rgba(56, 171, 30, 0.5); }
+        .register-and-login .main-form form .form-group input::placeholder {
+          color: rgba(56, 171, 30, 0.5); }
+        .register-and-login .main-form form .form-group input[type="password"] {
+          padding-left: 30px; }
+      .register-and-login .main-form form .form-group button.main-btn {
+        width: 155px;
+        border-radius: 30px; }
+      .register-and-login .main-form form .form-group .show-hide-password {
+        position: absolute;
+        top: 11px;
+        left: 10px;
+        cursor: pointer; }
+        .register-and-login .main-form form .form-group .show-hide-password i, .register-and-login .main-form form .form-group .show-hide-password svg {
+          color: #38AB1E;
+          display: none !important; }
+          .register-and-login .main-form form .form-group .show-hide-password i.active, .register-and-login .main-form form .form-group .show-hide-password svg.active {
+            display: inline !important; }
+  .register-and-login .another-log {
+    color: #FFFCFC; }
 
 /* =====[Start: Global rules]===== */
 body {

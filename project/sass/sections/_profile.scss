@@ -1,3 +1,166 @@
 .profile-page {
-    
+    .profile-main-info {
+        .profile-img {
+            img {
+                width: 150px;
+                height: 150px;
+                border-radius: 50%;
+                @media #{$maxMobile} {
+                    width: 120px;
+                    height: 120px;
+                }
+            }
+        }
+        .user-name {
+            color: $mainColor;
+            font: {
+                size: 22px;
+                weight: bold
+            }
+            display: inline-block;
+            margin: 10px 0;
+            cursor: pointer;
+            @media #{$maxMobile} {
+                font: {
+                    size: 20px;
+                    weight: bold
+                }
+            }
+            &:hover {
+                @media #{$maxMobile} {
+                    color: $blackColor;
+                }   
+            }
+        }
+        .user-code {
+            direction: rtl;
+            @media #{$maxMobile} {
+                color: $blackColor;
+            }
+        }
+    }
+    #changeUsername {
+        input {
+            direction: rtl;
+        }
+    }
+    .other-user-info {
+        margin-top: 50px;
+        form {
+            direction: rtl;
+            max-width: 300px;
+            margin-left: auto;
+            text-align: right;
+            .general-label {
+                color: $mainColor;
+                font: {
+                    size: 20px;
+                    weight: 600
+                }
+                @media #{$maxMobile} {
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+    .user-friends {
+        text-align: right;
+        margin-top: 70px;
+        > h3 {
+            font: {
+                size: 20px;
+                weight: 600
+            }
+            color: $mainColor;
+            margin-bottom: 20px;
+            @media #{$maxMobile} {
+                font-size: 16px;
+            }
+        }
+        > .row {
+            flex-direction: row-reverse;
+            .friend-info {
+                .friend-img {
+                    img {
+                        width: 79px;
+                        height: 79px;
+                    }
+                    margin-bottom: 15px;
+                }
+                .frienf-name {
+                    max-width: 79px;
+                    color: $whiteColor; 
+                    font: {
+                        size: 16px;
+                        weight: normal
+                    }
+                    @media #{$maxMobile} {
+                        color: $blackColor;
+                    }
+                    span {
+                        display: block;
+                        width: 79px;
+                        margin-left: auto;
+                    }
+                }
+                &.all-friends-grid {
+                    display: flex;
+                    flex-direction: row-reverse;
+                    align-items: center;
+                    margin-bottom: 50px;
+                    .friend-img {
+                        margin-bottom: 0;
+                    }
+                    >div {
+                        flex: 0 0 50%;
+                        max-width: 50%;
+                        &.friend-img {
+                            flex: 0 0 30%;
+                            max-width: 30%;
+                        }
+                    }
+                    .friend-progress {
+                        padding-right: 10px;
+                        .friend-name {
+                            margin-bottom: 5px;
+                            display: block;
+                            @media #{$maxMobile} {
+                                color: $blackColor;
+                            }
+                        }
+                        .friend-progress-bar {
+                            >span {
+                                height: 7px;
+                                background-color: $whiteColor;
+                                display: block;
+                                border-radius: 7px;
+                                @media #{$maxMobile} {
+                                    border: 1px solid $mainColor;
+                                }
+                                span {
+                                    border-radius: 7px;
+                                    background-color: $mainColor;
+                                    height: 7px;
+                                    display: block;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .show-all-friends {
+            display: block;
+            color: $mainColor;
+            font: {
+                size: 20px;
+                weight: 500
+            };
+            @media #{$maxMobile} {
+                font-size: 18px;
+                text-align: left !important;
+            }
+            margin: 40px 0;
+        }
+    }
 }

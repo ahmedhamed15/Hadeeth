@@ -1,0 +1,78 @@
+            
+.register-and-login {
+    background: url('../images/global/islamic-background.svg') no-repeat center center fixed;
+    background-size: cover;
+    background-color: $blackColor;
+    height: 100vh;
+    width: 100vw;
+    > .container {
+        height: 100%;
+        display: flex;
+        align-items: center;
+    }
+    .main-form {
+        width: 300px;
+        margin: auto;
+        .main-logo {
+            display: flex;
+            justify-content: center;
+            flex-direction: row-reverse;
+            color: $mainColor;
+            > img {
+                width: 70px;
+                height: auto;
+            }
+            > span {
+                margin-right: 11px;
+                margin-top: 6px;
+                b {
+                    display: block;
+                    font-size: 32px;
+                    &:last-child {
+                        margin-top: -25px;
+                    }
+                }
+            }
+        }
+        form {
+            > h2 {
+                color: $whiteColor;
+                font-size: 20px;
+                margin: 35px 0 20px;
+            }
+            .form-group {
+                position: relative;
+                input {
+                    text-align: right;
+                    &::placeholder {
+                        color: rgba($mainColor, 0.5);
+                    }
+                    &[type="password"] {
+                        padding-left: 30px;
+                    }
+                }
+                button.main-btn {
+                    width: 155px;
+                    border-radius: 30px;
+                }
+                .show-hide-password {
+                    position: absolute;
+                    top: 11px;
+                    left: 10px;
+                    cursor: pointer;
+                    i, svg {
+                        color: $mainColor;
+                        display: none !important;
+                        &.active {
+                            display: inline !important;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+    .another-log {
+        color: $whiteColor;
+    }
+}

@@ -59,4 +59,48 @@ $(function() {
       });
       $('.pie_progress').asPieProgress('start');
 
+       // Copy function
+        function copyMessage(val) {
+
+            // Copy text
+            const selBox = document.createElement('textarea');
+            selBox.style.position = 'fixed';
+            selBox.style.left = '0';
+            selBox.style.top = '0';
+            selBox.style.opacity = '0';
+            selBox.value = val;
+            document.body.appendChild(selBox);
+            selBox.focus();
+            selBox.select();
+            document.execCommand('copy');
+            document.body.removeChild(selBox);
+
+            
+
+        }
+
+        // Hadeeth copy
+        $('.copyHadeeth').on('click', function() {
+            copyMessage($('.hadeeth-body').text());
+            swal("تم النسخ", "تم نسخ الحديث بنجاح", "success");
+        });
+
+        // $('.copy-explain-hadeeth').on('click', function() {
+        //     console.log('Ahmed hamed')
+        //     copyMessage($('.explain-hadeeth').text());
+        //     swal("تم النسخ", "تم نسخ شرح الحديث بنجاح", "success");
+        // });
+
+        $('.show-hide-password').on('click', function() {
+            var passField = $('.main-form .password-field'),
+                $this = $(this);
+            if (passField.prop('type') == "password") {
+                passField.prop('type', 'text');
+                $this.find('svg.fa-lock').addClass('active').siblings().removeClass('active');
+            } else {
+                passField.prop('type', 'password');
+                $this.find('svg.fa-lock').removeClass('active').siblings().addClass('active');
+            }
+        })
+
 });
