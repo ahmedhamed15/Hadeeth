@@ -1113,4 +1113,9 @@ a {
     .modal.fade.show .modal-dialog {
       transform: translateY(0) !important; } }
 
+.close-maqased-sidebar {
+  position: absolute;
+  top: 15px;
+  right: 15px; }
+
 /* =====[End: Global rules]===== */
